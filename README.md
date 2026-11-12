@@ -69,8 +69,6 @@ The architecture deliberately favors **process isolation and bounded local work*
 | Relative engine work | `hammerhead` design notes | **~312k points/dragon-round** vs. ~331k for the earlier `v_meta` policy |
 | Portal test | `test_portal_seek.py`, 20 deterministic seeds | **39-turn median**, **47-turn worst case** |
 | Current policy vs. predecessor | `results.csv` matrix | **20/36 wins (55.6%)** |
-| End-to-end p50/p99 turn latency | No wall-clock instrumentation is committed | **[INSERT BENCHMARK: p50/p99 ms per turn]** |
-| Memory footprint | No profiler output is committed | **[INSERT BENCHMARK: RSS per dragon process]** |
 
 Run games **serially** when benchmarking. One match can spawn up to 128 bot processes; concurrent matches can exhaust the host and cause turn-budget failures that invalidate results. Use both colors and multiple seeds before treating a matchup difference as signal.
 
